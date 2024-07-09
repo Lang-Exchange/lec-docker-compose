@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+    lec-api-gateway:
+      image: thuongnguyen158/le-api-gateway:latest
+      container_name: lec-api-gateway
+      environment:
+        ASPNETCORE_ENVIRONMENT: Development
+      networks:
+        - lang-exchange-network
+      restart: always
+      ports:
+      - "7777:80"
+networks:
+  lang-exchange-network:
+    external: true
+    
+
+    
